@@ -1,0 +1,217 @@
+#homepage-content2 {
+    width: 100vw;
+    margin: 0 !important;
+    padding: 0 !important;
+    main#primary {
+        margin: 0 !important;
+        padding: 0 !important;
+        h1, h2, h3, h4,h5,h6 {
+            font-family: 'myfont3', sans-serif !important;
+            font-weight: 500;
+        }
+        #homepageBannerSection2 {
+            width: 100%;
+    
+            #homeBanner2 {
+                width: 100%;
+                height: 100%;
+                position: relative;
+    
+                .bannervideo2 {
+                    width: 100%;
+                    height: 100vh;
+                    z-index: 1;
+    
+                    video {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+    
+                .bannerContent2 {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100vh;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    background-image: url('./assets/img/bannerOverlay.png');
+                    background-size: cover;
+                    background-position: center;
+                    z-index: 5;
+    
+                    h1 {
+                        text-align: center;
+                        font-size: 56px;
+                        margin-bottom: 50px;
+                        font-weight: 500;
+                    }
+    
+                    h2 {
+                        text-align: center;
+                        font-size: 48px;
+                        font-weight: 500;
+                        line-height: 1.1;
+                        max-width: 600px;
+                    }
+                }
+    
+                .bannerImage2 {
+                    width: 100%;
+                    height: 300px;
+                    position: relative;
+                    padding-bottom: 300px;
+    
+                    img {
+                        width: 100%;
+                        max-width: 900px;
+                        object-fit: contain;
+                        position: absolute;
+                        top: -80%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        z-index: 10;
+                    }
+                }
+            }
+        }
+    
+        #videoIntroductionSection2 {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            z-index: 22;
+    
+            #videoAnimationWrapper2 {
+                background-color: #F2F0EE;
+                width: 100%;
+                height: 100%;
+    
+                .videoContainerX {
+                    width: 100%;
+                    height: 100vh;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+    
+                    video {
+                        width: -moz-fit-content;
+                        width: fit-content;
+                        height: -moz-fit-content;
+                        height: fit-content;
+                        -o-object-fit: contain;
+                        object-fit: contain;
+                        border: 2px solid #F2F0EE;
+                        box-shadow: inset 0 0 0 5px #F2F0EE;
+                    }
+                }
+            }
+    
+        }
+        #scrollContentSection2 {
+            width: 100%;
+            height: auto;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 333;
+        
+            .scrollContentWrapper {
+                width: 100%;
+                height: fit-content;
+                font-family: 'myfont3', sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .contentSection1 {
+                    width: 100%;
+                    max-width: 1425px;
+                    height: auto;
+                    display: flex;
+                    justify-content: space-between;
+                    .contentSection1_title {
+                        width: 30%;
+                        text-align: left;
+                    }
+        
+                    .contentSection1_subtitle {
+                        width: 40%;
+                        text-align: left;
+                    }
+                }
+                .contentSectionLeft{
+                    width: 100%;
+                    max-width: 1425px;
+                    height: 600px;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    .leftTextContent{
+                        width: 100%;
+                        max-width: 450px;
+                        text-align: left;
+                    }
+                }
+                .contentSectionRight{
+                    width: 100%;
+                    max-width: 1425px;
+                    height: 600px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    .rightTextContent{
+                        width: 100%;
+                        max-width: 450px;
+                        text-align: left;
+                        .accordianWrapper{
+                            width: 100%;
+                            .accordianList{
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+                                list-style-type: none;
+                                .accordianItem{
+                                    width: 100%;
+                                    border: 1px solid transparent;
+                                    border-top: 1px solid black;
+                                    border-bottom: 1px solid black;
+                                    .accordianTitle{
+                                        width: 100%;
+                                        padding: 10px 0;
+                                        display: flex;
+                                        justify-content: space-between; 
+                                        align-items: center;
+                                        h3{
+                                            font-size: 16px;
+                                            font-weight: 500;
+                                            text-transform: uppercase;
+                                        }
+                                        .accordianIcon{
+                                            display: block;
+                                            width: 10px;
+                                            height: 10px;
+                                            background-color: gray;
+                                            border-radius: 50%;
+                                        }
+                                    }
+                                    .accordianContent{
+                                        max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+        }
+    }
+
+}

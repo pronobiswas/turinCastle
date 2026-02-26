@@ -1,0 +1,109 @@
+/**
+Theme Name: Astra Child
+Author: Brainstorm Force
+Author URI: http://wpastra.com/about/
+Description: Astra is the fastest, fully customizable & beautiful theme suitable for blogs, personal portfolios and business websites. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with schema.org code integrated so search engines will love your site. Astra offers plenty of sidebar options and widget areas giving you a full control for customizations. Furthermore, we have included special features and templates so feel free to choose any of your favorite page builder plugin to create pages flexibly. Some of the other features: # WooCommerce Ready # Responsive # Compatible with major plugins # Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained & Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and beautiful theme!
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: astra-child
+Template: astra
+*/
+@import './assets/scss/home.scss';
+#homepage-content * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'myfont1';
+    src: url('assets/fonts/myFont1.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'myfont2';
+    src: url('assets/fonts/layra.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'myfont3';
+    src: url('assets/fonts/Optima.woff2') format('woff2');
+}
+// ===================================================
+@font-face {
+    font-family: 'myfont3';
+    src: url('assets/fonts/Edwardian.ttf') format('ttf');
+}
+@font-face {
+    font-family: 'myfont3';
+    src: url('assets/fonts/Hatton.woff2') format('woff2');
+}
+
+
+
+
+
+
+#custom_header{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #header_main{
+        width: 100%;
+        max-width: 1200px;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        a{
+            display: block;
+            width: 20%;
+            .logo{
+                width: 100%;
+                height: 50px;
+                background-color: rgb(156, 245, 248);
+            }
+        }
+        .menu{
+            *,*::before,*::after{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            width: 70%;
+            height: 50px;
+            background-color: rgb(103, 170, 100);
+            nav{
+                width: 100%;
+                height: 100%;
+                ul{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    list-style: none;
+                    li{
+                        a{
+                            display: block;
+                            width: 100%;
+                            text-decoration: none;
+                            color: black;
+                            font-family: 'myfont2', sans-serif;
+                            font-size: 18px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+        .nav_action{
+            width: 10%;
+            height: 50px;
+            background-color: rgb(127, 199, 221);
+        }
+    }
+}

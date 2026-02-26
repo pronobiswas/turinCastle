@@ -1,0 +1,46 @@
+<?php
+/**
+ * Template for displaying single posts
+ * @package Astra Child
+ */
+
+get_header(); ?>
+
+<main id="site-content" role="main">
+
+    <?php
+    if ( have_posts() ) :
+        while ( have_posts() ) : the_post(); ?>
+
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                
+                <header class="entry-header">
+                    <h1 class="entry-title"><?php the_title(); ?></h1>
+                    <div class="entry-meta">
+                        <span class="posted-on"><?php echo get_the_date(); ?></span>
+                        <span class="author"><?php the_author(); ?></span>
+                    </div>
+                </header>
+
+                <div class="entry-content">
+                    <?php the_content(); ?>
+                </div>
+
+                <footer class="entry-footer">
+                    <?php the_tags( '<span class="tags">Tags: ', ', ', '</span>' ); ?>
+                </footer>
+
+            </article>
+
+            <?php
+            // Optional: Add comments section
+            if ( comments_open() || get_comments_number() ) {
+                comments_template();
+            }
+        endwhile;
+    endif;
+    ?>
+
+</main>
+
+<?php get_footer(); ?>
