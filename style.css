@@ -9,210 +9,92 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: astra-child
 Template: astra
 */
-#homepage-content2 {
-  width: 100vw;
-  margin: 0 !important;
-  padding: 0 !important;
+@font-face {
+  font-family: "Hatton";
+  src: url("../fonts/Hatton.otf") format("opentype");
+  font-display: swap;
 }
-#homepage-content2 main#primary {
-  margin: 0 !important;
-  padding: 0 !important;
+@font-face {
+  font-family: "Edwardian";
+  src: url("../fonts/Edwardian.ttf") format("truetype");
+  font-display: swap;
 }
-#homepage-content2 main#primary h1, #homepage-content2 main#primary h2, #homepage-content2 main#primary h3, #homepage-content2 main#primary h4, #homepage-content2 main#primary h5, #homepage-content2 main#primary h6 {
-  font-family: "myfont3", sans-serif !important;
-  font-weight: 500;
-}
-#homepage-content2 main#primary #homepageBannerSection2 {
+#homepage-content {
   width: 100%;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-#homepage-content2 main#primary #homepageBannerSection2 #homeBanner2 {
-  width: 100%;
-  height: 100%;
+#homepage-content .hero-video {
   position: relative;
-}
-#homepage-content2 main#primary #homepageBannerSection2 #homeBanner2 .bannervideo2 {
   width: 100%;
   height: 100vh;
-  z-index: 1;
+  overflow: hidden;
+  background-color: black;
 }
-#homepage-content2 main#primary #homepageBannerSection2 #homeBanner2 .bannervideo2 video {
+#homepage-content .hero-video .heroOverlay {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-#homepage-content2 main#primary #homepageBannerSection2 #homeBanner2 .bannerContent2 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 999;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("./assets/img/bannerOverlay.png");
-  background-size: cover;
-  background-position: center;
-  z-index: 5;
 }
-#homepage-content2 main#primary #homepageBannerSection2 #homeBanner2 .bannerContent2 h1 {
+#homepage-content .hero-video .heroOverlay .heroContent {
+  width: 100%;
+  height: auto;
+  max-width: 768px;
   text-align: center;
-  font-size: 56px;
-  margin-bottom: 50px;
-  font-weight: 500;
+  color: #CFB53A;
 }
-#homepage-content2 main#primary #homepageBannerSection2 #homeBanner2 .bannerContent2 h2 {
-  text-align: center;
+#homepage-content .hero-video .heroOverlay .heroContent .heroTitle {
+  font-family: "Hatton", sans-serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #CFB53A;
+}
+#homepage-content .hero-video .heroOverlay .heroContent .heroHeading {
+  font-family: "Edwardian", sans-serif;
   font-size: 48px;
-  font-weight: 500;
-  line-height: 1.1;
-  max-width: 600px;
+  color: #CFB53A;
 }
-#homepage-content2 main#primary #homepageBannerSection2 #homeBanner2 .bannerImage2 {
-  width: 100%;
-  height: 300px;
-  position: relative;
-  padding-bottom: 300px;
+#homepage-content .hero-video .heroOverlay .heroContent .heroDescription {
+  font-family: "Hatton", sans-serif;
+  font-size: 18px;
+  margin-top: 20px;
+  color: #CFB53A;
+  margin-bottom: 25px;
 }
-#homepage-content2 main#primary #homepageBannerSection2 #homeBanner2 .bannerImage2 img {
-  width: 100%;
-  max-width: 900px;
-  -o-object-fit: contain;
-     object-fit: contain;
+#homepage-content .hero-video .heroOverlay .heroContent .heroButton {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-family: "Hatton", sans-serif;
+  font-size: 18px;
+  color: #CFB53A;
+  background-color: transparent;
+  border: 2px solid #CFB53A;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#homepage-content .hero-video .heroOverlay .heroContent .heroButton:hover {
+  background-color: #CFB53A;
+  color: black;
+}
+#homepage-content .hero-video iframe {
   position: absolute;
-  top: -80%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-}
-#homepage-content2 main#primary #videoIntroductionSection2 {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  position: relative;
-  z-index: 22;
-}
-#homepage-content2 main#primary #videoIntroductionSection2 #videoAnimationWrapper2 {
-  background-color: #F2F0EE;
-  width: 100%;
-  height: 100%;
-}
-#homepage-content2 main#primary #videoIntroductionSection2 #videoAnimationWrapper2 .videoContainerX {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-#homepage-content2 main#primary #videoIntroductionSection2 #videoAnimationWrapper2 .videoContainerX video {
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  -o-object-fit: contain;
-  object-fit: contain;
-  border: 2px solid #F2F0EE;
-  box-shadow: inset 0 0 0 5px #F2F0EE;
-}
-#homepage-content2 main#primary #scrollContentSection2 {
-  width: 100%;
-  height: auto;
-  padding: 80px 20px;
-  text-align: center;
-  position: relative;
-  z-index: 333;
-}
-#homepage-content2 main#primary #scrollContentSection2 .scrollContentWrapper {
-  width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-  font-family: "myfont3", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-#homepage-content2 main#primary #scrollContentSection2 .scrollContentWrapper .contentSection1 {
-  width: 100%;
-  max-width: 1425px;
-  height: auto;
-  display: flex;
-  justify-content: space-between;
-}
-#homepage-content2 main#primary #scrollContentSection2 .scrollContentWrapper .contentSection1 .contentSection1_title {
-  width: 30%;
-  text-align: left;
-}
-#homepage-content2 main#primary #scrollContentSection2 .scrollContentWrapper .contentSection1 .contentSection1_subtitle {
-  width: 40%;
-  text-align: left;
-}
-#homepage-content2 main#primary #scrollContentSection2 .scrollContentWrapper .contentSectionLeft {
-  width: 100%;
-  max-width: 1425px;
-  height: 600px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-#homepage-content2 main#primary #scrollContentSection2 .scrollContentWrapper .contentSectionLeft .leftTextContent {
-  width: 100%;
-  max-width: 450px;
-  text-align: left;
-}
-#homepage-content2 main#primary #scrollContentSection2 .scrollContentWrapper .contentSectionRight {
-  width: 100%;
-  max-width: 1425px;
-  height: 600px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-#homepage-content2 main#primary #scrollContentSection2 .scrollContentWrapper .contentSectionRight .rightTextContent {
-  width: 100%;
-  max-width: 450px;
-  text-align: left;
-}
-#homepage-content2 main#primary #scrollContentSection2 .scrollContentWrapper .contentSectionRight .rightTextContent .accordianWrapper {
-  width: 100%;
-}
-#homepage-content2 main#primary #scrollContentSection2 .scrollContentWrapper .contentSectionRight .rightTextContent .accordianWrapper .accordianList {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  list-style-type: none;
-}
-#homepage-content2 main#primary #scrollContentSection2 .scrollContentWrapper .contentSectionRight .rightTextContent .accordianWrapper .accordianList .accordianItem {
-  width: 100%;
-  border: 1px solid transparent;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-}
-#homepage-content2 main#primary #scrollContentSection2 .scrollContentWrapper .contentSectionRight .rightTextContent .accordianWrapper .accordianList .accordianItem .accordianTitle {
-  width: 100%;
-  padding: 10px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#homepage-content2 main#primary #scrollContentSection2 .scrollContentWrapper .contentSectionRight .rightTextContent .accordianWrapper .accordianList .accordianItem .accordianTitle h3 {
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-#homepage-content2 main#primary #scrollContentSection2 .scrollContentWrapper .contentSectionRight .rightTextContent .accordianWrapper .accordianList .accordianItem .accordianTitle .accordianIcon {
-  display: block;
-  width: 10px;
-  height: 10px;
-  background-color: gray;
-  border-radius: 50%;
-}
-#homepage-content2 main#primary #scrollContentSection2 .scrollContentWrapper .contentSectionRight .rightTextContent .accordianWrapper .accordianList .accordianItem .accordianContent {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
+  transform: translate(-50%, -50%) scale(1.2);
+  z-index: 9;
 }
 
 #homepage-content * {
@@ -222,24 +104,14 @@ Template: astra
 }
 
 @font-face {
-  font-family: "myfont1";
-  src: url("assets/fonts/myFont1.woff2") format("woff2");
+  font-family: "Hatton";
+  src: url("assets/fonts/Hatton.otf") format("opentype");
+  font-display: swap;
 }
 @font-face {
-  font-family: "myfont2";
-  src: url("assets/fonts/layra.woff2") format("woff2");
-}
-@font-face {
-  font-family: "myfont3";
-  src: url("assets/fonts/Optima.woff2") format("woff2");
-}
-@font-face {
-  font-family: "myfont3";
-  src: url("assets/fonts/Edwardian.ttf") format("ttf");
-}
-@font-face {
-  font-family: "myfont3";
-  src: url("assets/fonts/Hatton.woff2") format("woff2");
+  font-family: "Edwardian";
+  src: url("assets/fonts/Edwardian.ttf") format("truetype");
+  font-display: swap;
 }
 #custom_header {
   width: 100%;
@@ -248,24 +120,34 @@ Template: astra
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
 }
 #custom_header #header_main {
   width: 100%;
+  height: auto;
   max-width: 1200px;
   height: auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-#custom_header #header_main a {
-  display: block;
-  width: 20%;
+#custom_header #header_main .logo {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
 }
-#custom_header #header_main a .logo {
-  width: 100%;
-  height: 50px;
-  background-color: rgb(156, 245, 248);
+#custom_header #header_main .logo img {
+  width: 100px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
-#custom_header #header_main .menu *, #custom_header #header_main .menu *::before, #custom_header #header_main .menu *::after {
+#custom_header #header_main .menu *,
+#custom_header #header_main .menu *::before,
+#custom_header #header_main .menu *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -273,13 +155,8 @@ Template: astra
 #custom_header #header_main .menu {
   width: 70%;
   height: 50px;
-  background-color: rgb(103, 170, 100);
 }
-#custom_header #header_main .menu nav {
-  width: 100%;
-  height: 100%;
-}
-#custom_header #header_main .menu nav ul {
+#custom_header #header_main .menu ul {
   width: 100%;
   height: 100%;
   display: flex;
@@ -287,17 +164,124 @@ Template: astra
   align-items: center;
   list-style: none;
 }
-#custom_header #header_main .menu nav ul li a {
-  display: block;
-  width: 100%;
-  text-decoration: none;
-  color: black;
-  font-family: "myfont2", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
+#custom_header #header_main .menu ul li .linkBox {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 30px;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: "Hatton", sans-serif;
+  font-size: 20px;
+  color: #CFB53A;
 }
-#custom_header #header_main .nav_action {
+#custom_header #header_main .menu ul li .linkBox .linkText {
+  position: relative;
+  top: 0;
+  transform: rotateX(0);
+  transition: 0.2s all linear;
+}
+#custom_header #header_main .menu ul li .linkBox .linkHoverText {
+  position: relative;
+  top: -10px;
+  transform: rotateX(90deg);
+  transition: 0.2s all linear;
+}
+#custom_header #header_main .menu ul li .linkBox:hover .linkText {
+  top: -15px;
+  transform: rotateX(90deg);
+}
+#custom_header #header_main .menu ul li .linkBox:hover .linkHoverText {
+  top: -32px;
+  transform: rotateX(0deg);
+}
+#custom_header #header_main .menu .nav_action {
   width: 10%;
   height: 50px;
   background-color: rgb(127, 199, 221);
+}
+
+#custom_footer {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background-color: black;
+  color: #CFB53A;
+  text-align: center;
+  font-family: "Hatton", sans-serif;
+}
+#custom_footer .footer_container {
+  width: 100%;
+}
+#custom_footer .footer_container a {
+  color: #CFB53A;
+  text-decoration: none;
+}
+#custom_footer .footer_container .footer_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#custom_footer .footer_container .footer_wrapper ul {
+  list-style-type: none;
+}
+#custom_footer .footer_container .footer_wrapper .footer_logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#custom_footer .footer_container .footer_wrapper .footer_logo img {
+  transform: translateX(15px);
+}
+#custom_footer .footer_container .footer_wrapper .underline {
+  width: 100%;
+  max-width: 300px;
+  height: 1px;
+  background-color: #CFB53A;
+}
+#custom_footer .footer_container .footer_wrapper .address {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#custom_footer .footer_container .footer_wrapper .footer_menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#custom_footer .footer_container .footer_wrapper .footer_menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+#custom_footer .footer_container .footer_wrapper .social_media {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#custom_footer .footer_container .footer_wrapper .social_media ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#custom_footer .footer_container .footer_wrapper .footer_separator {
+  width: 90%;
+  margin: 0 auto;
+}
+#custom_footer .footer_container .footer_wrapper .footnote {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Hatton", sans-serif;
 }/*# sourceMappingURL=style.css.map */

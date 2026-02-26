@@ -14,24 +14,24 @@
 define( 'CHILD_THEME_ASTRA_CHILD_VERSION', '1.0.0' );
 
 // &&&&&&&& add theme support &&&&&&&&&
-function child_theme_setup() {
-    add_theme_support( 'custom-logo' );
-    add_theme_support( 'post-thumbnails' );
-    add_theme_support( 'title-tag' );
-}
-add_action( 'after_setup_theme', 'child_theme_setup', 5 );
+// function child_theme_setup() {
+//     add_theme_support( 'custom-logo' );
+//     add_theme_support( 'post-thumbnails' );
+//     add_theme_support( 'title-tag' );
+// }
+// add_action( 'after_setup_theme', 'child_theme_setup', 5 );
 
 
 
-function mytheme_register_menus() {
-    register_nav_menus(
-        array(
-            'primary-menu' => __( 'Primary Menu', 'astra-child' ),
-            'footer-menu'  => __( 'Footer Menu', 'astra-child' ),
-        )
-    );
-}
-add_action( 'init', 'mytheme_register_menus' );
+// function mytheme_register_menus() {
+//     register_nav_menus(
+//         array(
+//             'primary-menu' => __( 'Primary Menu', 'astra-child' ),
+//             'footer-menu'  => __( 'Footer Menu', 'astra-child' ),
+//         )
+//     );
+// }
+// add_action( 'init', 'mytheme_register_menus' );
 
 
 
@@ -40,7 +40,11 @@ add_action( 'init', 'mytheme_register_menus' );
  * Enqueue styles
  */
 function child_enqueue_styles() {
-	wp_enqueue_style( 'astra-child-theme-css', get_stylesheet_directory_uri() . '/style.css', array('astra-theme-css'), CHILD_THEME_ASTRA_CHILD_VERSION, 'all' );
+	wp_enqueue_style( 'astra-child-fonts-css', get_stylesheet_directory_uri() . '/fonts.css', array(),
+     CHILD_THEME_ASTRA_CHILD_VERSION, 'all' );
+	wp_enqueue_style( 'astra-child-theme-css', get_stylesheet_directory_uri() . '/style.css', array('astra-theme-css'),
+     CHILD_THEME_ASTRA_CHILD_VERSION, 'all' );
+     
 }
 add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
 
