@@ -31,6 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div id="header_main" class="header_main">
             <div class="logo">
                 <a href="<?php echo esc_url(home_url('/')); ?>">
+                    
                     <img src="https://alex.techhunter2024.online/wp-content/uploads/2026/02/Turin-Castle-Logo-1-1.webp" alt="logo">
                 </a>
             </div>

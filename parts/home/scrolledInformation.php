@@ -1,0 +1,20 @@
+<section id="scrolledInformation">
+    <div class="wrapper">
+        <aside id="scrolledInformationSidebar">
+            this is the sidebar content
+            <div class="asideImageConainer">
+                <img src="https://alex.techhunter2024.online/wp-content/uploads/2026/02/65711269-081f-4f13-b5b4-6c85e9a4d50b.webp" alt="image">
+                <img src="https://alex.techhunter2024.online/wp-content/uploads/2026/02/Turin-Wedding-107-of-486.webp" alt="image">
+                <img src="https://alex.techhunter2024.online/wp-content/uploads/2026/02/65711269-081f-4f13-b5b4-6c85e9a4d50b.webp" alt="image">
+                <img src="https://alex.techhunter2024.online/wp-content/uploads/2026/02/Turin-Wedding-107-of-486.webp" alt="image">
+
+            </div>
+        </aside>
+        <div id="scrolledInformationContent">
+            
+            <div class="scrolledInformationContentInner">
+                <h3>this is the main content</h3>
+            </div>
+        </div>
+    </div>
+</section>

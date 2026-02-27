@@ -24,6 +24,8 @@ get_header(); ?>
         </div>
     </div>
 
+    <?php include get_stylesheet_directory() . '/parts/home/scrolledInformation.php'; ?>
+
 
 
 

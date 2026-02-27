@@ -15,6 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
     <footer id="custom_footer">
+        <div>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/castleSketch.webp" alt="">
+        </div>
         <div class="footer_container">
             <div class="footer_wrapper">
                 <div class="footer_logo">
@@ -26,12 +29,12 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <div class="address">
                     <ul>
                         <li>
-                            <a href="tell:+44 (0)1307 830463">+44 (0)1307 830463</a>
+                            <a href="tell:+44 (0)1307 830463" class="line_effect">+44 (0)1307 830463</a>
                         </li>
                         <li>
-                            <a href="mailto:yvonne@turincastlescotland.com">yvonne@turincastlescotland.com</a>
+                            <a href="mailto:yvonne@turincastlescotland.com" class="line_effect">yvonne@turincastlescotland.com</a>
                         </li>
-                        <li>Turin Castle, Angus, DD8 2UF Scotland</li>
+                        <li class="line_effect">Turin Castle, Angus, DD8 2UF Scotland</li>
                     </ul>
                 </div>
 
@@ -61,9 +64,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
                 <div class="footnote">
-                    <div> <a href="TERMS & CONDITION"></a></div>
+                    <div> <a href="TERMS & CONDITION">TERMS & CONDITION</a></div>
                     <div>
-                        <p> © 2026 Turin Castle. All rights reserved.</p>
+                        <p class="line_effect"> © 2026 Turin Castle. All rights reserved.</p>
                     </div>
 
                 </div>

@@ -62,7 +62,7 @@ Template: astra
 }
 #homepage-content .hero-video .heroOverlay .heroContent .heroHeading {
   font-family: "Edwardian", sans-serif;
-  font-size: 48px;
+  font-size: clamp(48px, 5vw, 96px);
   color: #CFB53A;
 }
 #homepage-content .hero-video .heroOverlay .heroContent .heroDescription {
@@ -97,6 +97,63 @@ Template: astra
   z-index: 9;
 }
 
+#scrolledInformation {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+#scrolledInformation .wrapper {
+  width: 100%;
+  height: 100vh;
+  background: #eeebe5;
+  display: flex;
+}
+#scrolledInformation .wrapper #scrolledInformationSidebar {
+  width: 60%;
+  height: 100%;
+  padding: 20px;
+  overflow-y: hidden;
+}
+#scrolledInformation .wrapper #scrolledInformationSidebar .asideImageConainer {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+#scrolledInformation .wrapper #scrolledInformationSidebar .asideImageConainer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#scrolledInformation .wrapper #scrolledInformationContent {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#scrolledInformation .wrapper #scrolledInformationContent .scrolledInformationContentInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#scrolledInformation .wrapper #scrolledInformationContent .scrolledInformationContentInner h3 {
+  font-family: "Hatton", sans-serif;
+  font-size: 54px;
+  color: #CFB53A;
+  margin-bottom: 20px;
+}
+
+:root {
+  --primary-color: #CA9F5D;
+  --secondary-color: #7A1E1E;
+  --text-color: #CA9F5D;
+  --background-color: #D1B841;
+}
+
 #homepage-content * {
   margin: 0;
   padding: 0;
@@ -113,6 +170,11 @@ Template: astra
   src: url("assets/fonts/Edwardian.ttf") format("truetype");
   font-display: swap;
 }
+header {
+  background-color: #eeebe5;
+  backdrop-filter: blur(5px);
+}
+
 #custom_header {
   width: 100%;
   height: auto;
@@ -172,7 +234,7 @@ Template: astra
   overflow: hidden;
   cursor: pointer;
   font-family: "Hatton", sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   color: #CFB53A;
 }
 #custom_header #header_main .menu ul li .linkBox .linkText {
@@ -188,11 +250,11 @@ Template: astra
   transition: 0.2s all linear;
 }
 #custom_header #header_main .menu ul li .linkBox:hover .linkText {
-  top: -15px;
+  top: -12px;
   transform: rotateX(90deg);
 }
 #custom_header #header_main .menu ul li .linkBox:hover .linkHoverText {
-  top: -32px;
+  top: -26px;
   transform: rotateX(0deg);
 }
 #custom_header #header_main .menu .nav_action {
