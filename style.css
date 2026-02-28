@@ -19,6 +19,54 @@ Template: astra
   src: url("../fonts/Edwardian.ttf") format("truetype");
   font-display: swap;
 }
+.hoverBtn {
+  position: relative;
+  width: 120px;
+  height: 45px;
+  padding: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #890423;
+  background: #f6efe9;
+  border: 1px solid #890423;
+  outline: none;
+  font-weight: 400;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+.hoverBtn:hover {
+  background-color: transparent;
+  border: 1px solid #890423;
+  outline: none;
+}
+.hoverBtn span {
+  position: relative;
+  z-index: 2;
+}
+.hoverBtn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #890423;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 1;
+}
+.hoverBtn:hover::before {
+  transform: scaleY(1);
+  transform-origin: bottom;
+}
+.hoverBtn::before {
+  transform-origin: top;
+}
+.hoverBtn:hover span {
+  color: #fff;
+}
+
 #homepage-content {
   width: 100%;
   min-height: 100vh;
@@ -33,7 +81,10 @@ Template: astra
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-color: black;
+  background-color: #eeebe5;
+}
+#homepage-content .hero-video iframe .html5-video-player {
+  background-color: #eeebe5 !important;
 }
 #homepage-content .hero-video .heroOverlay {
   width: 100%;
@@ -111,16 +162,16 @@ Template: astra
 #scrolledInformation .wrapper #scrolledInformationSidebar {
   width: 60%;
   height: 100%;
-  padding: 20px;
+  padding: min(50px, 5vw);
   overflow-y: hidden;
 }
 #scrolledInformation .wrapper #scrolledInformationSidebar .asideImageConainer {
   width: 100%;
-  height: auto;
-  aspect-ratio: 1/1;
+  height: calc(100vh - 100px);
+  aspect-ratio: 1/0.8;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: min(50px, 5vw);
 }
 #scrolledInformation .wrapper #scrolledInformationSidebar .asideImageConainer img {
   width: 100%;
@@ -133,21 +184,196 @@ Template: astra
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 #scrolledInformation .wrapper #scrolledInformationContent .scrolledInformationContentInner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#scrolledInformation .wrapper #scrolledInformationContent .scrolledInformationContentInner h3 {
+  font-family: "Hatton", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: #CFB53A;
+  margin-bottom: 20px;
+  text-align: left;
+}
+#scrolledInformation .wrapper #scrolledInformationContent .scrolledInformationContentInner p {
+  width: 70%;
+  font-family: "Hatton", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: #CFB53A;
+  -webkit-text-stroke: 0.5px #CFB53A;
+}
+
+#homepageSlider {
+  width: 100%;
+  height: 100%;
+  background-color: #eeebe5;
+}
+#homepageSlider .wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 100px 0;
+}
+#homepageSlider .wrapper .sliderHeader {
+  width: 100%;
+  padding-bottom: 50px;
+}
+#homepageSlider .wrapper .sliderHeader .homesliderHeading {
+  width: 40%;
+  font-family: "Hatton", sans-serif;
+  font-size: 36px;
+  font-weight: 200;
+  color: #7A1E1E;
+  -webkit-text-stroke: 1px #7A1E1E;
+}
+#homepageSlider .wrapper .sliderWrapper {
+  width: 100%;
+  height: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+}
+#homepageSlider .wrapper .sliderWrapper .leftSlider {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#homepageSlider .wrapper .sliderWrapper .leftSlider .sliderIndicaror {
+  width: 100%;
+  height: 60px;
+  color: #7A1E1E;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 50px;
+}
+#homepageSlider .wrapper .sliderWrapper .leftSlider .sliderIndicaror .slideNumbers {
+  font-size: 2.8rem;
+  font-family: "Hatton", sans-serif;
+  font-weight: 500;
+  position: relative;
+}
+#homepageSlider .wrapper .sliderWrapper .leftSlider .sliderIndicaror .slideTitle {
+  font-size: 1.8rem;
+  font-family: "Hatton", sans-serif;
+  font-weight: 900;
+}
+#homepageSlider .wrapper .sliderWrapper .leftSlider .slideLeft {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  max-height: 600px;
+  background-color: #eeebe5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#homepageSlider .wrapper .sliderWrapper .leftSlider .slideLeft .slideImage {
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  background-color: #eeebe5;
+}
+#homepageSlider .wrapper .sliderWrapper .leftSlider .slideLeft .slideImage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#homepageSlider .wrapper .sliderWrapper .leftSlider .slideLeft .slideContent {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+#homepageSlider .wrapper .sliderWrapper .leftSlider .slideLeft .slideContent p {
+  font-size: 1.2rem;
+  line-height: 1em;
+  font-family: "Hatton", sans-serif;
+  font-weight: 200;
+  -webkit-text-stroke: 0.5px #7A1E1E;
+  color: #7A1E1E;
+}
+#homepageSlider .wrapper .sliderWrapper .rightslider {
+  width: 50%;
+  height: calc(100vh - 100px);
+}
+#homepageSlider .wrapper .sliderWrapper .rightslider .sliderRightImage {
+  width: 100%;
+  height: 100%;
+  background-color: #eeebe5;
+  position: relative;
+}
+#homepageSlider .wrapper .sliderWrapper .rightslider .sliderRightImage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#homepageSlider .wrapper .sliderWrapper .rightslider .sliderRightImage .sliderIndicators {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: stranslateY(-50%);
+  width: 100%;
+  height: 100px;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#homepageSlider .wrapper .sliderWrapper .rightslider .sliderRightImage .sliderIndicators .slideIndicate {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(122, 30, 30, 0.8235294118);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#scrolledInformation .wrapper #scrolledInformationContent .scrolledInformationContentInner h3 {
-  font-family: "Hatton", sans-serif;
-  font-size: 54px;
+#homepageSlider .wrapper .sliderWrapper .rightslider .sliderRightImage .sliderIndicators .slideIndicate span {
+  font-size: 2rem;
   color: #CFB53A;
-  margin-bottom: 20px;
+  line-height: 0.8;
+  padding-bottom: 2px;
+}
+
+#mapLocation {
+  width: 100%;
+  height: 100%;
+  background-color: #eeebe5;
+}
+#mapLocation .wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+#mapLocation .wrapper .mapLocationContent {
+  width: 100%;
+}
+#mapLocation .wrapper .mapLocationMap {
+  width: 100%;
+  height: 100%;
+}
+#mapLocation .wrapper .mapLocationMap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 :root {
+  --bg-color1: #eeebe5;
   --primary-color: #CA9F5D;
   --secondary-color: #7A1E1E;
   --text-color: #CA9F5D;
@@ -162,7 +388,23 @@ Template: astra
 
 @font-face {
   font-family: "Hatton";
+  src: url("assets/fonts/Hatton_Ultralight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Hatton";
+  src: url("assets/fonts/Hatton_Medium_500.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Hatton";
   src: url("assets/fonts/Hatton.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
   font-display: swap;
 }
 @font-face {
@@ -234,6 +476,7 @@ header {
   overflow: hidden;
   cursor: pointer;
   font-family: "Hatton", sans-serif;
+  font-weight: 500;
   font-size: 16px;
   color: #CFB53A;
 }

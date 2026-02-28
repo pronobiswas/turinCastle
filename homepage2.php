@@ -25,6 +25,8 @@ get_header(); ?>
     </div>
 
     <?php include get_stylesheet_directory() . '/parts/home/scrolledInformation.php'; ?>
+    <?php include get_stylesheet_directory() . '/parts/home/slider.php'; ?>
+    <?php include get_stylesheet_directory() . '/parts/home/locationMap.php'; ?>
 
 
 

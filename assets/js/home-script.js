@@ -1,51 +1,4 @@
-// const asideImage =[
-//     'https://alex.techhunter2024.online/wp-content/uploads/2026/02/image-23.webp',
-//     'https://alex.techhunter2024.online/wp-content/uploads/2026/02/65711269-081f-4f13-b5b4-6c85e9a4d50b.webp',
-//     'https://alex.techhunter2024.online/wp-content/uploads/2026/02/IMG_5973-scaled-e1771448882950.webp',
-//     'https://alex.techhunter2024.online/wp-content/uploads/2026/02/Turin-Wedding-107-of-486.webp'
-// ]
 
-// const slideContentImage =[
-//     'https://alex.techhunter2024.online/wp-content/uploads/2026/02/PHOTO-2026-02-05-13-53-47-5.webp',
-//     'https://alex.techhunter2024.online/wp-content/uploads/2026/02/PHOTO-2026-02-05-13-53-47-9-1.webp',
-//     'https://alex.techhunter2024.online/wp-content/uploads/2026/02/PHOTO-2024-11-20-14-36-07.webp',
-//     'https://alex.techhunter2024.online/wp-content/uploads/2026/02/PHOTO-2026-02-05-13-53-47-5.webp'
-// ]
-// (function() {
-//     if (!window.gsap || !window.ScrollTrigger) return;
-
-//     gsap.registerPlugin(ScrollTrigger);
-//     const scrolledInformation= document.getElementById("scrolledInformation");
-//     const scrolledInformationSidebar= document.getElementById("scrolledInformationSidebar");
-//     const scrolledInformationContent= document.getElementById("scrolledInformationContent");
-//     console.log(scrolledInformation,scrolledInformationSidebar,scrolledInformationContent);
-    
-//     const tl = gsap.timeline({
-//         scrollTrigger: {
-//             trigger: scrolledInformation,
-//             start: "top 10%",
-//             end: "+=500",
-//             scrub: 1,
-//             pin: true,
-//             pinSpacing: true,
-//             markers: true,
-//         }
-//     });
-//     tl.to(scrolledInformationSidebar, { 
-//         backgroundColor: "var(--primary-color)",
-//         duration: 1,
-//      })
-//       .to(scrolledInformationContent, { 
-//         backgroundColor: "var(--primary-color)",
-//         duration: 1,
-//       }, "<");
-        
-    
-
-
-
-    
-// })();
 document.addEventListener("DOMContentLoaded", function () {
 
     if (!window.gsap || !window.ScrollTrigger) return;
@@ -88,12 +41,12 @@ document.addEventListener("DOMContentLoaded", function () {
         opacity: 0,
         duration: 1,
         stagger: {
-    grid: [7,15],
-    from: "center",
-    axis: "x",
-    ease: "power2.in",
-    amount: 1.5
-  }
+        grid: [7,15],
+        from: "center",
+        axis: "x",
+        ease: "power2.in",
+        amount: 1.5
+    }
     });
 
     // =========line effect===========
@@ -106,22 +59,21 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollTrigger: {
             trigger: scrolledInformation,
             start: "top 9%",
-            end: "+=500",
+            end: "+=900",
             scrub: 1,
             pin: true,
             pinSpacing: true,
-            markers: true,
         }
     });
 
     tl.to(asideImageConainer, { 
-        yPercent: -70,
+        yPercent: -200,
         duration: 1,
     })
-    .to(scrolledInformationContent, { 
-        backgroundColor: "var(--primary-color)",
-        duration: 1,
-    }, "<");
+    // .to(scrolledInformationContent, { 
+    //     backgroundColor: "var(--primary-color)",
+    //     duration: 1,
+    // }, "<");
 
 
     // $$$$$$$$$$$$$$  Footer $$$$$$$$$$$$$$
@@ -134,22 +86,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const footer_separator = custom_footer.querySelector(".footer_separator");
     const footnote = custom_footer.querySelector(".footnote");
 
-    const lineEffectText = document.querySelectorAll(".line_effect");
-    lineEffectText.forEach((text) => {
-        let split = SplitText.create(text, { type: "lines,words, chars" ,mask: "lines"});
-        gsap.from(split.lines, {
-            yPercent: 100,
-            duration: 1,
-            stagger: 0.1,
-            scrollTrigger: {
-                trigger: text,
-                start: "top 85%",
-                end: "+=100",
-                scrub: true,
-                markers: true,
-            }
-            });
-    });
+    // const lineEffectText = document.querySelectorAll(".line_effect");
+    // lineEffectText.forEach((text) => {
+    //     let split = SplitText.create(text, { type: "lines,words, chars" ,mask: "lines"});
+    //     gsap.from(split.lines, {
+    //         yPercent: 100,
+    //         duration: 1,
+    //         stagger: 0.1,
+    //         scrollTrigger: {
+    //             trigger: text,
+    //             start: "top 85%",
+    //             end: "+=100",
+    //             scrub: true,
+    //             markers: true,
+    //         }
+    //         });
+    // });
 
     if(custom_footer){
         let footerTimeline = gsap.timeline({
