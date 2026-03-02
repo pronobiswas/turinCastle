@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
     <footer id="custom_footer">
-        <div>
+        <div class="castleImage">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/castleSketch.webp" alt="">
         </div>
         <div class="footer_container">

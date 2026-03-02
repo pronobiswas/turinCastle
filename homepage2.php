@@ -15,15 +15,20 @@ get_header(); ?>
             <div class="heroContent">
                 <h3 class="heroTitle">A Private Luxury Estate in Scotland</h3>
                 <h1 class="heroHeading">The Luxury Castle</h1>
-                <p class="heroDescription">“How beautiful Turin looked in the late afternoon light. My first glimpse will stay with me forever.
-
-                    The sheer grey stone walls full of majesty against the pale yellow sky and the welcome of the
-                    flickering lights within”</p>
+                <!-- <p class="heroDescription">“Built in 1659 and carefully relocated stone by stone from the loch in 1907,
+                    Turin Castle now rests within twenty acres of sweeping lawns, overlooking the rolling Angus
+                    countryside.
+                    Beyond the breathtaking setting, our exclusive-use castle offers everything you need to experience
+                    Scottish country living at its finest.
+                    Host a truly bespoke event, linger a little longer to enjoy golf, whisky and the natural beauty of
+                    Scotland - or make it official and gather your loved ones for an unforgettable Scottish wedding
+                    within the grounds.”</p> -->
                 <a href="#" class="heroButton btn">Explore Now</a>
             </div>
         </div>
     </div>
 
+    <?php include get_stylesheet_directory() . '/parts/home/homeSection2.php'; ?>
     <?php include get_stylesheet_directory() . '/parts/home/scrolledInformation.php'; ?>
     <?php include get_stylesheet_directory() . '/parts/home/slider.php'; ?>
     <?php include get_stylesheet_directory() . '/parts/home/locationMap.php'; ?>
