@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 </a>
             </div>
             <div class="menu">
-                <ul>
+                <!-- <ul>
                     <li>
                         <a href="https://turincastle.previewmysite.online/the-castle/">
                             <div class="linkBox">
@@ -48,8 +48,8 @@ if ( ! defined( 'ABSPATH' ) ) {
                     </li>
                     <li>
                         <div class="linkBox">
-                            <div class="linkText">Expriences</div>
-                            <div class="linkHoverText">Expriences</div>
+                            <div class="linkText">Experiences</div>
+                            <div class="linkHoverText">Experiences</div>
                         </div>
                     </li>
                     <li>
@@ -66,8 +66,8 @@ if ( ! defined( 'ABSPATH' ) ) {
                     </li>
                     <li>
                         <div class="linkBox">
-                            <div class="linkText">Signuture wedding</div>
-                            <div class="linkHoverText">Signuture wedding</div>
+                            <div class="linkText">Signature Weddings</div>
+                            <div class="linkHoverText">Signature Weddings</div>
                         </div>
                     </li>
                     <li>
@@ -75,6 +75,58 @@ if ( ! defined( 'ABSPATH' ) ) {
                             <div class="linkText">Contact</div>
                             <div class="linkHoverText">Contact</div>
                         </div>
+                    </li>
+                </ul> -->
+
+
+                <ul>
+                    <li>
+                        <a href="https://turincastle.previewmysite.online/the-castle/">
+                            <div class="linkBox">
+                                <div class="linkText">The Castle</div>
+                                <div class="linkHoverText">The Castle</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://turincastle.previewmysite.online/exprience/">
+                            <div class="linkBox">
+                                <div class="linkText">Experiences</div>
+                                <div class="linkHoverText">Experiences</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://turincastle.previewmysite.online/the-castle/">
+                            <div class="linkBox">
+                                <div class="linkText">Adventure</div>
+                                <div class="linkHoverText">Adventure</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://turincastle.previewmysite.online/sporting/">
+                            <div class="linkBox">
+                                <div class="linkText">Sporting</div>
+                                <div class="linkHoverText">Sporting</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://turincastle.previewmysite.online/signuture-wedding/">
+                            <div class="linkBox">
+                                <div class="linkText">Signature Weddings</div>
+                                <div class="linkHoverText">Signature Weddings</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://turincastle.previewmysite.online/the-castle/">
+                            <div class="linkBox">
+                                <div class="linkText">Contact</div>
+                                <div class="linkHoverText">Contact</div>
+                            </div>
+                        </a>
                     </li>
                 </ul>
             </div>

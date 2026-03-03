@@ -13,17 +13,9 @@ get_header(); ?>
         </iframe>
         <div class="heroOverlay">
             <div class="heroContent">
-                <h3 class="heroTitle">A Private Luxury Estate in Scotland</h3>
-                <h1 class="heroHeading">The Luxury Castle</h1>
-                <!-- <p class="heroDescription">“Built in 1659 and carefully relocated stone by stone from the loch in 1907,
-                    Turin Castle now rests within twenty acres of sweeping lawns, overlooking the rolling Angus
-                    countryside.
-                    Beyond the breathtaking setting, our exclusive-use castle offers everything you need to experience
-                    Scottish country living at its finest.
-                    Host a truly bespoke event, linger a little longer to enjoy golf, whisky and the natural beauty of
-                    Scotland - or make it official and gather your loved ones for an unforgettable Scottish wedding
-                    within the grounds.”</p> -->
-                <a href="#" class="heroButton btn">Explore Now</a>
+                <!-- <h1 class="heroHeading">The Turin Castle</h1>
+                <h3 class="heroTitle">“Where History Meets Hidden Luxury – Yours, Exclusively.”</h3>
+                <a href="#" class="heroButton btn">Explore Now</a> -->
             </div>
         </div>
     </div>

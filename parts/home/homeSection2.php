@@ -11,8 +11,8 @@
                 the grounds.</p>
         </div>
         <div class="imageContainer">
-            <div class="imgBox">
-                <img src="https://turincastle.previewmysite.online/wp-content/uploads/2026/03/cropped-Turin-Castle-Logo-1-e1771024884860.png" alt="image">
+            <div class="imageBox">
+                <img src="https://alex.techhunter2024.online/wp-content/uploads/2026/02/61260fddfab44b795cac88df_Kristi-Ellison-Turin-Castle-Illustration-gold-1.webp" alt="image">
             </div>
         </div>
     </div>

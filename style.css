@@ -197,17 +197,16 @@ Template: astra
   display: flex;
   justify-content: center;
 }
-#homeSection2 .wrapper .imageContainer .imgBox {
+#homeSection2 .wrapper .imageContainer .imageBox {
   width: 100%;
   height: 100%;
-  max-width: 300px;
-  aspect-ratio: 1/1;
 }
-#homeSection2 .wrapper .imageContainer .imgBox img {
+#homeSection2 .wrapper .imageContainer .imageBox img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  filter: contrast(1.2) brightness(0.5);
 }
 
 #scrolledInformation {
@@ -296,7 +295,7 @@ Template: astra
 }
 #homepageSlider .wrapper .sliderHeader {
   width: 100%;
-  padding-bottom: 50px;
+  padding: 0 0 50px 50px;
 }
 #homepageSlider .wrapper .sliderHeader .homesliderHeading {
   width: 40%;
@@ -393,12 +392,23 @@ Template: astra
 #homepageSlider .wrapper .sliderWrapper .rightslider {
   width: 50%;
   height: calc(100vh - 100px);
+  padding-right: min(50px, 5vw);
 }
 #homepageSlider .wrapper .sliderWrapper .rightslider .sliderRightImage {
   width: 100%;
   height: 100%;
   background-color: #eeebe5;
   position: relative;
+  overflow-x: hidden;
+}
+#homepageSlider .wrapper .sliderWrapper .rightslider .sliderRightImage .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #eeebe5;
+  z-index: 9;
 }
 #homepageSlider .wrapper .sliderWrapper .rightslider .sliderRightImage img {
   width: 100%;
@@ -410,9 +420,8 @@ Template: astra
   position: absolute;
   top: 50%;
   left: 0;
-  transform: stranslateY(-50%);
+  transform: translateY(-50%);
   width: 100%;
-  height: 100px;
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
@@ -428,12 +437,20 @@ Template: astra
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: 0.1s all linear;
 }
 #homepageSlider .wrapper .sliderWrapper .rightslider .sliderRightImage .sliderIndicators .slideIndicate span {
   font-size: 2rem;
-  color: #CFB53A;
+  color: #ffffff;
   line-height: 0.8;
   padding-bottom: 2px;
+}
+#homepageSlider .wrapper .sliderWrapper .rightslider .sliderRightImage .sliderIndicators .slideIndicate:hover {
+  transform: scale(1.1);
+  background-color: #f6efe9;
+}
+#homepageSlider .wrapper .sliderWrapper .rightslider .sliderRightImage .sliderIndicators .slideIndicate:hover span {
+  color: #7A1E1E;
 }
 
 #mapLocation {
@@ -615,11 +632,18 @@ header {
 #custom_footer {
   width: 100%;
   height: auto;
-  padding: 20px;
-  background-color: black;
-  color: #CFB53A;
+  background-color: #eeebe5;
   text-align: center;
   font-family: "Hatton", sans-serif;
+  padding-bottom: 50px;
+}
+#custom_footer p {
+  margin: 0;
+  font-family: "Hatton", sans-serif;
+  font-weight: 200;
+  color: #CA9F5D;
+  -webkit-text-stroke: 0.5px #CA9F5D;
+  text-stroke: 0.5px #CA9F5D;
 }
 #custom_footer .castleImage {
   width: 100%;
@@ -637,8 +661,12 @@ header {
   width: 100%;
 }
 #custom_footer .footer_container a {
-  color: #CFB53A;
+  color: #CA9F5D;
   text-decoration: none;
+  font-family: "Hatton", sans-serif;
+  font-weight: 200;
+  -webkit-text-stroke: 0.5px #CA9F5D;
+  text-stroke: 0.5px #CA9F5D;
 }
 #custom_footer .footer_container .footer_wrapper {
   width: 100%;
@@ -681,10 +709,45 @@ header {
   justify-content: center;
 }
 #custom_footer .footer_container .footer_wrapper .footer_menu ul {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  gap: 25px;
+  list-style: none;
+}
+#custom_footer .footer_container .footer_wrapper .footer_menu ul li .linkBox {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 30px;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: "Hatton", sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  color: #CA9F5D;
+}
+#custom_footer .footer_container .footer_wrapper .footer_menu ul li .linkBox .linkText {
+  position: relative;
+  top: 0;
+  transform: rotateX(0);
+  transition: 0.2s all linear;
+}
+#custom_footer .footer_container .footer_wrapper .footer_menu ul li .linkBox .linkHoverText {
+  position: relative;
+  top: -10px;
+  transform: rotateX(90deg);
+  transition: 0.2s all linear;
+}
+#custom_footer .footer_container .footer_wrapper .footer_menu ul li .linkBox:hover .linkText {
+  top: -12px;
+  transform: rotateX(90deg);
+}
+#custom_footer .footer_container .footer_wrapper .footer_menu ul li .linkBox:hover .linkHoverText {
+  top: -26px;
+  transform: rotateX(0deg);
 }
 #custom_footer .footer_container .footer_wrapper .social_media {
   width: 100%;
@@ -696,6 +759,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 12px;
 }
 #custom_footer .footer_container .footer_wrapper .footer_separator {
   width: 90%;
@@ -707,4 +771,6 @@ header {
   align-items: center;
   justify-content: center;
   font-family: "Hatton", sans-serif;
+  background-color: #eeebe5;
+  gap: min(50px, 5vw);
 }/*# sourceMappingURL=style.css.map */

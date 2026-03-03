@@ -12,15 +12,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!scrolledInformation || !scrolledInformationSidebar || !scrolledInformationContent) return;
 
+
   // =========line effect===========
   const heroTitle = document.querySelector(".heroTitle");
   const heroHeading = document.querySelector(".heroHeading");
-  const heroDescription = document.querySelector(".heroDescription");
-
 
   let splitTitle = SplitText.create(heroTitle, { type: "lines,", mask: "lines", linesClass: "lines" });
   let splitHeading = SplitText.create(heroHeading, { type: "lines", mask: "lines", linesClass: "lines" });
-  let splitDescription = SplitText.create(heroDescription, { type: "lines,words", wordsClass: "words" });
 
   gsap.from(splitTitle.lines, {
     yPercent: 100,
@@ -36,18 +34,18 @@ document.addEventListener("DOMContentLoaded", function () {
     stagger: 0.1
   });
 
-  gsap.from(splitDescription.words, {
-    yPercent: 100,
-    opacity: 0,
-    duration: 1,
-    stagger: {
-      grid: [7, 15],
-      from: "center",
-      axis: "x",
-      ease: "power2.in",
-      amount: 1.5
-    }
-  });
+  // gsap.from(splitDescription.words, {
+  //   yPercent: 100,
+  //   opacity: 0,
+  //   duration: 1,
+  //   stagger: {
+  //     grid: [7, 15],
+  //     from: "center",
+  //     axis: "x",
+  //     ease: "power2.in",
+  //     amount: 1.5
+  //   }
+  // });
 
   // =========line effect===========
 
@@ -63,23 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const footer_social = custom_footer.querySelector(".social_media");
   const footer_separator = custom_footer.querySelector(".footer_separator");
   const footnote = custom_footer.querySelector(".footnote");
-
-  // const lineEffectText = document.querySelectorAll(".line_effect");
-  // lineEffectText.forEach((text) => {
-  //     let split = SplitText.create(text, { type: "lines,words, chars" ,mask: "lines"});
-  //     gsap.from(split.lines, {
-  //         yPercent: 100,
-  //         duration: 1,
-  //         stagger: 0.1,
-  //         scrollTrigger: {
-  //             trigger: text,
-  //             start: "top 85%",
-  //             end: "+=100",
-  //             scrub: true,
-  //             markers: true,
-  //         }
-  //         });
-  // });
 
   if (custom_footer) {
     let footerTimeline = gsap.timeline({
@@ -115,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
       trigger: "#scrolledInformation",
       start: "top 80",
       // end: () => "+=" + (totalHeight - window.innerHeight),
-      end: () => "+=" + (totalHeight - window.innerHeight*2),
+      end: () => "+=" + (totalHeight - window.innerHeight * 2),
       scrub: true,
       pin: true,
       pinSpacing: true,
@@ -124,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Text blocks (only 3 changes)
   let texts = [
-    { h3: "First content block", p: "This is the first text change...Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate." },
+    { h3: "Our Transportation", p: "Turin Castle offers private luxury helicopter transportation, ensuring guests arrive in style with breathtaking aerial views. This exclusive service combines convenience and elegance, making every journey part of the unforgettable castle experience.." },
     { h3: "Second content block", p: "This is the second text change...Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate." },
     { h3: "Third content block", p: "This is the third text change...Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate." },
     { h3: "fourth content block", p: "This is the third text change...Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate." }

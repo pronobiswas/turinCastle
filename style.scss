@@ -12,7 +12,7 @@ Template: astra
 
 @import './assets/scss/home.scss';
 
-:root{
+:root {
     --bg-color1: #eeebe5;
     --primary-color: #CA9F5D;
     --secondary-color: #7A1E1E;
@@ -27,25 +27,27 @@ Template: astra
 }
 
 @font-face {
-  font-family: 'Hatton';
-  src: url('assets/fonts/Hatton_Ultralight.otf') format('opentype');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
+    font-family: 'Hatton';
+    src: url('assets/fonts/Hatton_Ultralight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
 }
+
 @font-face {
-  font-family: 'Hatton';
-  src: url('assets/fonts/Hatton_Medium_500.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+    font-family: 'Hatton';
+    src: url('assets/fonts/Hatton_Medium_500.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
 }
+
 @font-face {
-  font-family: 'Hatton';
-  src: url('assets/fonts/Hatton.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+    font-family: 'Hatton';
+    src: url('assets/fonts/Hatton.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
 
 
@@ -63,10 +65,13 @@ Template: astra
 
 
 
-header{
+
+
+header {
     background-color: #eeebe5;
     backdrop-filter: blur(5px);
 }
+
 #custom_header {
     width: 100%;
     height: auto;
@@ -78,7 +83,7 @@ header{
     z-index: 1000;
     top: 0;
     left: 0;
-    
+
 
     #header_main {
         width: 100%;
@@ -175,100 +180,181 @@ header{
 }
 
 
-#custom_footer{
+#custom_footer {
     width: 100%;
     height: auto;
-    padding: 20px;
-    background-color: black;
-    color: #CFB53A;
+    background-color: #eeebe5;
     text-align: center;
     font-family: "Hatton", sans-serif;
-    .castleImage{
+    padding-bottom: 50px;
+
+    p {
+        margin: 0;
+        font-family: "Hatton", sans-serif;
+        font-weight: 200;
+        color: #CA9F5D;
+        -webkit-text-stroke: .5px #CA9F5D;
+        text-stroke: .5px #CA9F5D;
+    }
+
+    .castleImage {
         width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        img{
+
+        img {
             width: 100%;
             height: 100%;
             max-width: 450px;
         }
     }
-    .footer_container{
+
+    .footer_container {
         width: 100%;
-        a{
-            color: #CFB53A;
+
+        a {
+            color: #CA9F5D;
             text-decoration: none;
+            font-family: "Hatton", sans-serif;
+            font-weight: 200;
+            -webkit-text-stroke: .5px #CA9F5D;
+            text-stroke: .5px #CA9F5D;
         }
-        .footer_wrapper{
+
+        .footer_wrapper {
             width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
-            ul{list-style-type: none}
-            
-            .footer_logo{
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            img{
-                transform: translateX(15px);
+
+            ul {
+                list-style-type: none
             }
+
+            .footer_logo {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
+
+                img {
+                    transform: translateX(15px);
+                }
             }
-            .underline{
+
+            .underline {
                 width: 100%;
                 max-width: 300px;
                 height: 1px;
                 background-color: #CFB53A;
             }
-            .address{
+
+            .address {
                 margin-top: 30px;
                 width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
             }
-            .footer_menu{
+
+            .footer_menu {
                 width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                ul{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    gap: 25px;
+
+                // ul {
+                //     display: flex;
+                //     align-items: center;
+                //     justify-content: center;
+                //     gap: 25px;
+                // }
+                ul {
+                width: 100%;
+                max-width: 600px;
+                height: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                list-style: none;
+
+                li {
+                    .linkBox {
+                        width: fit-content;
+                        height: 30px;
+                        transform-style: preserve-3d;
+                        overflow: hidden;
+                        cursor: pointer;
+                        font-family: "Hatton", sans-serif;
+                        font-weight: 200;
+                        font-size: 16px;
+                        color: #CA9F5D;
+
+                        .linkText {
+                            position: relative;
+                            top: 0;
+                            transform: rotateX(0);
+                            transition: 0.2s all linear;
+                        }
+
+                        .linkHoverText {
+                            position: relative;
+                            top: -10px;
+                            transform: rotateX(90deg);
+                            transition: 0.2s all linear;
+                        }
+
+                        &:hover .linkText {
+                            top: -12px;
+                            transform: rotateX(90deg);
+                        }
+
+                        &:hover .linkHoverText {
+                            top: -26px;
+                            transform: rotateX(0deg);
+                        }
+
+                    }
                 }
 
             }
-            .social_media{
+
+            }
+
+            .social_media {
                 width: 100%;
-            display: flex;
+                display: flex;
                 align-items: center;
                 justify-content: center;
-                ul{
+                
+                ul {
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    gap: 12px;
                 }
 
-                
+
             }
-            .footer_separator{
+
+            .footer_separator {
                 width: 90%;
                 margin: 0 auto;
             }
-            .footnote{
+
+            .footnote {
                 width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 font-family: "Hatton", sans-serif;
+                background-color: #eeebe5;
+                gap: min(50px, 5vw)
             }
         }
     }
