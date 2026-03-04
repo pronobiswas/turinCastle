@@ -85,67 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
-  let images = document.querySelector(".asideImageConainer");
-  let totalHeight = images.scrollHeight;
 
-  // Vertical scroll for images
-  gsap.to(images, {
-    y: () => -(totalHeight - window.innerHeight),
-    ease: "none",
-    scrollTrigger: {
-      trigger: "#scrolledInformation",
-      start: "top 80",
-      // end: () => "+=" + (totalHeight - window.innerHeight),
-      end: () => "+=" + (totalHeight - window.innerHeight * 2),
-      scrub: true,
-      pin: true,
-      pinSpacing: true,
-    }
-  });
-
-  // Text blocks (only 3 changes)
-  let texts = [
-    { h3: "Our Transportation", p: "Turin Castle offers private luxury helicopter transportation, ensuring guests arrive in style with breathtaking aerial views. This exclusive service combines convenience and elegance, making every journey part of the unforgettable castle experience.." },
-    { h3: "Second content block", p: "This is the second text change...Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate." },
-    { h3: "Third content block", p: "This is the third text change...Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate." },
-    { h3: "fourth content block", p: "This is the third text change...Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate." }
-  ];
-  let triggerIndexes = [1, 3, 4, 5];
-  triggerIndexes.forEach((imgIndex, i) => {
-    ScrollTrigger.create({
-      trigger: images.children[imgIndex],
-      start: "center center",
-      onEnter: () => {
-        updateText(texts[i].h3, texts[i].p);
-      },
-      onLeaveBack: () => {
-        let prev = texts[i - 1] || texts[0];
-        updateText(prev.h3, prev.p);
-      }
-    });
-  });
-  function updateText(h3Text, pText) {
-    let h3 = document.querySelector("#scrolledInformationContent h3");
-    let p = document.querySelector("#scrolledInformationContent p");
-    gsap.to([h3, p], {
-      opacity: 0,
-      duration: 0.3,
-      onComplete: () => {
-        h3.textContent = h3Text;
-        p.textContent = pText;
-        gsap.to([h3, p], { opacity: 1, duration: 0.3 });
-
-        gsap.from('.myline', {
-          transformOrigin: "left",
-          scaleX: 0,
-          duration: 1,
-          stagger: 0.2,
-          ease: "power3.out"
-        }, "<");
-      }
-    });
-
-  }
   // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 });

@@ -130,7 +130,11 @@ if ( ! defined( 'ABSPATH' ) ) {
                     </li>
                 </ul>
             </div>
-            <div class="nav_action"></div>
+            <div class="nav_action">
+                <button class="navBtn">
+                    <span> Request a Proposal</span>
+                </button>
+            </div>
         </div>
         <!-- =============================== -->
     </header>

@@ -12,9 +12,9 @@
 
 .hoverBtn {
     position: relative;
-    width: 120px;
+    width: fit-content;
     height: 45px;
-    padding: 20px;
+    padding: 20px 20px !important;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -119,7 +119,7 @@
                     font-family: "Edwardian", sans-serif;
                     font-size: clamp(48px, 5vw, 96px);
                     font-weight: 800;
-                    
+
                 }
 
                 .heroDescription {
@@ -170,11 +170,13 @@
         height: 100%;
         padding: 100px 50px;
         display: flex;
+
         .textContainer {
             width: 60%;
             height: 100%;
             display: flex;
             flex-direction: column;
+
             .myText {
                 font-size: 50px;
                 font-weight: 500;
@@ -186,7 +188,8 @@
                 color: transparent;
                 color: #7A1E1E;
             }
-            .CastleDescription{
+
+            .CastleDescription {
                 font-size: 2.2rem;
                 font-weight: 500;
                 letter-spacing: 2px;
@@ -202,16 +205,19 @@
                 color: #7A1E1E;
             }
         }
-        .imageContainer{
+
+        .imageContainer {
             width: 40%;
             height: 100%;
             object-fit: cover;
             display: flex;
             justify-content: center;
-            .imageBox{
+
+            .imageBox {
                 width: 100%;
                 height: 100%;
-                img{
+
+                img {
                     width: 100%;
                     height: 100%;
                     object-fit: contain;
@@ -241,7 +247,7 @@
             .asideImageConainer {
                 width: 100%;
                 height: calc(100vh - 100px);
-                aspect-ratio: 1/0.8;
+                // aspect-ratio: 1/0.8;
                 display: flex;
                 flex-direction: column;
                 gap: min(50px, 5vw);
@@ -271,16 +277,18 @@
                 gap: 20px;
                 padding: min(50px, 5vw);
                 position: relative;
-                .myline{
+
+                .myline {
                     width: 120px;
                     height: 2px;
-                    background-image: url('https://turincastle.previewmysite.online/wp-content/uploads/2026/03/REBOOT-GUIDE-Resources-of-creativity-Design-rotated.jpg') ;
+                    background-image: url('https://turincastle.previewmysite.online/wp-content/uploads/2026/03/REBOOT-GUIDE-Resources-of-creativity-Design-rotated.jpg');
                     background-size: cover;
                     position: absolute;
                     top: 10%;
                     left: -50px;
                 }
-                .myline2{
+
+                .myline2 {
                     top: 90%;
                 }
 
@@ -315,7 +323,7 @@
 
         .sliderHeader {
             width: 100%;
-            padding:0 0 50px 50px;
+            padding: 0 0 50px 50px;
 
             .homesliderHeading {
                 width: 40%;
@@ -382,7 +390,8 @@
                         background-color: #eeebe5;
                         position: relative;
                         overflow-x: hidden;
-                        .overlay{
+
+                        .overlay {
                             position: absolute;
                             top: 0;
                             left: 0;
@@ -391,6 +400,7 @@
                             background-color: #eeebe5;
                             z-index: 9;
                         }
+
                         img {
                             width: 100%;
                             height: 100%;
@@ -423,7 +433,7 @@
             .rightslider {
                 width: 50%;
                 height: calc(100vh - 100px);
-                padding-right:min(50px , 5vw) ;
+                padding-right: min(50px, 5vw);
 
                 .sliderRightImage {
                     width: 100%;
@@ -431,15 +441,17 @@
                     background-color: #eeebe5;
                     position: relative;
                     overflow-x: hidden;
-                        .overlay{
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            background-color: #eeebe5;
-                            z-index: 9;
-                        }
+
+                    .overlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #eeebe5;
+                        z-index: 9;
+                    }
+
                     img {
                         width: 100%;
                         height: 100%;
@@ -456,7 +468,7 @@
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
-    
+
                         .slideIndicate {
                             width: 60px;
                             height: 60px;
@@ -467,18 +479,23 @@
                             justify-content: center;
                             cursor: pointer;
                             transition: .1s all linear;
+
                             span {
                                 font-size: 2rem;
                                 color: #ffffff;
                                 line-height: 0.8;
                                 padding-bottom: 2px;
                             }
-                            &:hover{
+
+                            &:hover {
                                 transform: scale(1.1);
                                 background-color: #f6efe9;
                             }
-                            &:hover span{color: #7A1E1E;}
-                            
+
+                            &:hover span {
+                                color: #7A1E1E;
+                            }
+
                         }
                     }
                 }
@@ -487,6 +504,51 @@
         }
     }
 }
+
+#aboutMission {
+    width: 100%;
+    height: 100%;
+    background: #eeebe5;
+
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        padding: min(50px, 5vw);
+        .missionWrapper {
+            display: flex;
+            justify-content: start;
+            p {
+                width: clamp(300px , 60%, 1120px);
+                font-family: "Hatton", sans-serif;
+                font-size: 28px;
+                font-weight: 200;
+                color: #7A1E1E;
+                -webkit-text-stroke: 1px #7A1E1E;
+            }
+        }
+    }
+}
+    #testimonial{
+        width: 100%;
+        height: 100%;
+        background: #eeebe5;
+        .wrapper{
+            width: 100%;
+            height: 100%;
+            padding:min(50px , 5vw);
+            .testimonialWrapper{
+                width: 100%;
+                height: 100%;
+                .testimonial{
+                    width: min(300px,33%);
+                    height: 100%;
+                    aspect-ratio: 1 / 1;
+                    background: #000;
+                    display:inline-block;
+                }
+            }
+        }
+    }
 
 #mapLocation {
     width: 100%;
@@ -526,8 +588,9 @@
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-}u
-.words{
+}
+
+u .words {
     background-image: rl('https://turincastle.previewmysite.online/wp-content/uploads/2026/03/REBOOT-GUIDE-Resources-of-creativity-Design-rotated.jpg') !important;
     background-size: contain;
     background-clip: text;

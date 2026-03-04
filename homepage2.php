@@ -21,8 +21,11 @@ get_header(); ?>
     </div>
 
     <?php include get_stylesheet_directory() . '/parts/home/homeSection2.php'; ?>
-    <?php include get_stylesheet_directory() . '/parts/home/scrolledInformation.php'; ?>
+    <!-- <?php include get_stylesheet_directory() . '/parts/home/scrolledInformation.php'; ?> -->
+    <?php include get_stylesheet_directory() . '/parts/home/anotherScroll.php'; ?>
     <?php include get_stylesheet_directory() . '/parts/home/slider.php'; ?>
+    <?php include get_stylesheet_directory() . '/parts/home/mission.php'; ?>
+    <?php include get_stylesheet_directory() . '/parts/home/testimonial.php'; ?>
     <?php include get_stylesheet_directory() . '/parts/home/locationMap.php'; ?>
 
 
@@ -35,8 +38,7 @@ get_header(); ?>
 
 <?php get_footer(); ?>
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script> -->
+
 
 
 <script>

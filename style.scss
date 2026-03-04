@@ -116,7 +116,7 @@ header {
                 box-sizing: border-box;
             }
 
-            width: 70%;
+            width: 60%;
             height: 50px;
 
             ul {
@@ -168,10 +168,65 @@ header {
 
             }
 
-            .nav_action {
-                width: 10%;
-                height: 50px;
-                background-color: rgb(127, 199, 221);
+        }
+        .nav_action {
+            width: fit-content;
+            height: fit-content;
+            .navBtn {
+                position: relative;
+                width: fit-content;
+                // height: 45px;
+                height: auto;
+                padding: 12px 20px !important;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                color: #D1B841;
+                background: #f6efe9;
+                border: 1px solid #D1B841;
+                outline: none;
+                font-weight: 400;
+                overflow: hidden;
+                cursor: pointer;
+                z-index: 1;
+
+                &:hover {
+                    background-color: transparent;
+                    border: 1px solid #D1B841;
+                    outline: none;
+                }
+
+                span {
+                    position: relative;
+                    z-index: 2;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    background: #D1B841;
+                    transform: scaleY(0);
+                    transform-origin: bottom;
+                    transition: transform 0.5s cubic-bezier(.165, .84, .44, 1);
+                    z-index: 1;
+                }
+
+                &:hover::before {
+                    transform: scaleY(1);
+                    transform-origin: bottom;
+
+                }
+
+                &::before {
+                    transform-origin: top;
+
+                }
+
+                &:hover span {
+                    color: white;
+                }
             }
         }
     }
@@ -268,61 +323,55 @@ header {
                 align-items: center;
                 justify-content: center;
 
-                // ul {
-                //     display: flex;
-                //     align-items: center;
-                //     justify-content: center;
-                //     gap: 25px;
-                // }
                 ul {
-                width: 100%;
-                max-width: 600px;
-                height: 100%;
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                list-style: none;
+                    width: 100%;
+                    max-width: 600px;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    list-style: none;
 
-                li {
-                    .linkBox {
-                        width: fit-content;
-                        height: 30px;
-                        transform-style: preserve-3d;
-                        overflow: hidden;
-                        cursor: pointer;
-                        font-family: "Hatton", sans-serif;
-                        font-weight: 200;
-                        font-size: 16px;
-                        color: #CA9F5D;
+                    li {
+                        .linkBox {
+                            width: fit-content;
+                            height: 30px;
+                            transform-style: preserve-3d;
+                            overflow: hidden;
+                            cursor: pointer;
+                            font-family: "Hatton", sans-serif;
+                            font-weight: 200;
+                            font-size: 16px;
+                            color: #CA9F5D;
 
-                        .linkText {
-                            position: relative;
-                            top: 0;
-                            transform: rotateX(0);
-                            transition: 0.2s all linear;
+                            .linkText {
+                                position: relative;
+                                top: 0;
+                                transform: rotateX(0);
+                                transition: 0.2s all linear;
+                            }
+
+                            .linkHoverText {
+                                position: relative;
+                                top: -10px;
+                                transform: rotateX(90deg);
+                                transition: 0.2s all linear;
+                            }
+
+                            &:hover .linkText {
+                                top: -12px;
+                                transform: rotateX(90deg);
+                            }
+
+                            &:hover .linkHoverText {
+                                top: -26px;
+                                transform: rotateX(0deg);
+                            }
+
                         }
-
-                        .linkHoverText {
-                            position: relative;
-                            top: -10px;
-                            transform: rotateX(90deg);
-                            transition: 0.2s all linear;
-                        }
-
-                        &:hover .linkText {
-                            top: -12px;
-                            transform: rotateX(90deg);
-                        }
-
-                        &:hover .linkHoverText {
-                            top: -26px;
-                            transform: rotateX(0deg);
-                        }
-
                     }
-                }
 
-            }
+                }
 
             }
 
@@ -331,12 +380,30 @@ header {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                
+
                 ul {
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     gap: 12px;
+
+                    li {
+                        svg {
+                            transition: 0.2s all linear;
+
+                            path {
+                                fill: #CA9F5D;
+                            }
+
+                            &:hover {
+                                transform: scale(1.1);
+                            }
+
+                            &:hover path {
+                                fill: #CFB53A;
+                            }
+                        }
+                    }
                 }
 
 
